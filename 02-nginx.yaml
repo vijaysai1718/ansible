@@ -1,6 +1,6 @@
 - name: install and run the nginx server
   hosts: web
-  become: yes #it will make sure it will become the root user 
+  become: yes #it will make sure it will become the root user  or true also we can use instead of yes
   tasks:
   - name: install the nginx 
     ansible.bulitin.dnf:
