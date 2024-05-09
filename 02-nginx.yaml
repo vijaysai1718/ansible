@@ -11,3 +11,12 @@
      name: nginx
      state: started
      enabled: yes
+  - name: "stopping the server"
+    dnf:
+     name: nginx
+     state: absent
+  - name: "disabling the server"
+    services:
+     name: nginx
+     state: stopped
+     enabled: no
