@@ -1,0 +1,6 @@
+- name: pingtheserver
+  hosts: all
+  task: #list of task
+  - name: pining the server
+    ansible.bulitin.ping: 
+ 
