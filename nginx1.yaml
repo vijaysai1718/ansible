@@ -11,11 +11,6 @@
     name: nginx
     state: started
     enabled: yes
-
-- name : Installing the Github
-  hosts: all
-  become: yes
-  tasks:
   - name : installting the github 
     ansible.builtin.dnf:
     name: github
