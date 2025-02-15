@@ -1,0 +1,8 @@
+- name: installing the git hub in the server 
+  hosts: all
+  become: yes
+  tasks:
+  - name: installing the git hub
+    ansible.builtin.dnf:
+      name: github
+      status: latest 
