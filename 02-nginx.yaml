@@ -1,21 +1,21 @@
-- name: install and run the nginx server
+-name: install and run the nginx server
   hosts: web
   become: yes #it will make sure it will become the root user  or true also we can use instead of yes
   tasks:
-  - name: install the nginx 
+  -name: install the nginx 
     ansible.bulitin.dnf:
      name: nginx
      state: latest
-  - name: run the nginx
+  -name: run the nginx
     ansible.bulitin.services:
      name: nginx
      state: started
      enabled: yes
-  - name: "stopping the server"
+  -name: "stopping the server"
     dnf:
      name: nginx
      state: absent
-  - name: "disabling the server"
+  -name: "disabling the server"
     services:
      name: nginx
      state: stopped
